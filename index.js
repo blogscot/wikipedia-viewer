@@ -4,6 +4,7 @@ import dummyData from './dummy-data'
 const form = document.querySelector('form')
 const input = document.querySelector('input')
 const ul = document.querySelector('ul')
+const icon = document.querySelector('#icon')
 
 const display = list => {
   ul.innerHTML = list
@@ -44,13 +45,20 @@ const handleInput = e => {
   const text = input.value
 
   if (text !== '') {
+    icon.classList.add('icon-visible')
     getServerData(text).catch(err => console.error('Server error: ', err))
   }
-
-  // clear input
-  input.value = ''
 }
 
-// Event Listener
+const clearSearchInfo = () => {
+  icon.classList.remove('icon-visible')
+  // clear input text
+  input.value = ''
+  ul.innerHTML = ''
+}
+
+// Event Listeners
 form.removeEventListener('submit', handleInput)
 form.addEventListener('submit', handleInput)
+icon.removeEventListener('click', clearSearchInfo)
+icon.addEventListener('click', clearSearchInfo)
