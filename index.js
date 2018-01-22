@@ -7,6 +7,11 @@ const ul = document.querySelector('ul')
 const icon = document.querySelector('#icon')
 
 const display = list => {
+  if (list.length === 0) {
+    ul.innerHTML = `<li id="no-match">No matches found.</li>`
+    return
+  }
+
   ul.innerHTML = list
     .map(item => {
       return `<a href="${item.link}" target="_blank">
@@ -40,7 +45,7 @@ const getServerData = async keyword => {
 
 const handleInput = e => {
   e.preventDefault()
-  const text = input.value
+  const text = input.value.trim()
 
   if (text !== '') {
     icon.classList.add('icon-visible')
