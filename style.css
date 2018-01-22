@@ -91,7 +91,7 @@ ul {
   grid-gap: 14px;
   justify-content: center;
   width: 80%;
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 ul > a:link,
@@ -99,6 +99,12 @@ ul > a:visited,
 ul > a:active {
   color: #020202;
   text-decoration-line: none;
+}
+
+@media screen and (min-width: 480px) {
+  ul {
+    margin: 30px auto;
+  }
 }
 
 li {
