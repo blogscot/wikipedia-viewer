@@ -8,6 +8,13 @@ body {
   background-color: teal;
 }
 
+#wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 h1 {
   margin-top: 40px;
   text-align: center;
@@ -52,7 +59,7 @@ form > input::placeholder {
 #icon {
   position: relative;
   top: 15px;
-  right: 29px;
+  right: 30px;
   transform: scale(0.8);
   visibility: hidden;
 }
@@ -121,4 +128,20 @@ li > h2 {
 
 li > p {
   font-size: 18px;
+}
+
+li#no-match {
+  text-align: center;
+  font-size: 22px;
+  background-color: inherit;
+  color: white;
+  box-shadow: inherit;
+}
+
+footer > a {
+  display: flex;
+  justify-content: center;
+  text-decoration-line: none;
+  color: azure;
+  padding: 1rem;
 }
