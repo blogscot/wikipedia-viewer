@@ -2,6 +2,8 @@
 
 This Wikipedia Viewer app is part of my Free Code Camp portfolio.
 
+View the [Magic](https://blogscot.github.io/wikipedia-viewer/).
+
 ## Tips and Tricks
 
 To test this web UI, I tested locally using my three main browswers: Firefox, Chrome and Safari. However, the coolest thing I found was using `ngrok` and passing its Internet feed into `http://sizzy.co/`, a tool for developing responsive websites, see instructions below.
