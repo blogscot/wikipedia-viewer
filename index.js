@@ -25,7 +25,6 @@ const getServerData = async keyword => {
 
   const response = await fetch(searchURL)
   const data = await response.json()
-  // const data = dummyData
 
   const [_, titles, contents, links] = data
 
@@ -36,7 +35,6 @@ const getServerData = async keyword => {
       link: links[index],
     }
   })
-
   display(searchInfo)
 }
 
